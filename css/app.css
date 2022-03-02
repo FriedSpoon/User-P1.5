@@ -201,11 +201,18 @@ div .arabica{
 	opacity: 90%;
 }
 .order{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
 	justify-self: end;
 	align-self: top;
 	margin-bottom: 5rem;
 	position: absolute;
 	padding: 3rem;
+	margin: 3rem;
+	background-color: white;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 8px 8px;
+
 }
 .order-button{
 	background-color: #F0F0F0;
@@ -343,6 +350,10 @@ div .arabica{
 	z-index: 1;
 	color: white ;
 	background-color: red;
+	display: grid;
+place-items: center;
+padding: 2.5rem;
+	
 }
 
 
@@ -856,7 +867,27 @@ padding: 2rem;
 background-color: grey;
 
 }
+.order{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+}
 
+.profile i{
+	display: grid;
+	place-items: center;
+	font-size: 3rem;
+	justify-self: center;
+	position: absolute;
+	top: 41%;
+	left: 18%;
+}
+.profile{
+		background-color:  var(--latte);
+		  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 8px 8px;
+
+
+}
 .order-settings .cart button{
 	width: 100%;
 	padding: 1rem;
@@ -998,3 +1029,8 @@ background-color: grey;
 .credit-page .hide{
 	display: none;
 }
+
+
+
+
+
