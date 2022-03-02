@@ -3,10 +3,9 @@ const cappuccinoPage = document.querySelector('.cappuccino-page')
 const overlay = document.querySelector('.order-settings');
 const btnMenu = document.querySelectorAll('.menu-button');
 const btnPlus = document.querySelectorAll('.count .increase');
-const btnCart = document.querySelector('.cart button');
 const btnMinus = document.querySelectorAll('.count .decrease');
-const form = document.querySelector('.counter');
-
+const o = document.querySelector('.processing');
+  const pt = document.querySelector('.add');
 
 
 const wot = document.querySelector('.without-tax span');
@@ -14,13 +13,10 @@ const t = document.querySelector('.tax span');
 const twt = document.querySelector('.total-with-tax span');
 
 
-  btnCart.addEventListener('click',function(e){
-    wot.textContent = "$2.99";
-    t.textContent = "$0.19";
-    twt.textContent = "$3.18";
-    e.preventDefault();
-    overlay.classList.add('hide');
-  })
+
+
+
+
   
   
 
@@ -29,7 +25,13 @@ const qty = form.querySelectorAll('input');
 let count = 0;
 let curr;
 
+if (document.querySelector('.checkout-page')) {
 
+
+pt.addEventListener('click', function(){
+  overlay.classList.remove('hide');
+})
+}
 
 btnMenu.forEach(function(a, i){
   a.addEventListener('click',function(){
@@ -45,7 +47,6 @@ window.addEventListener('keydown',function(e){
   }
 })
 
-  form.reset();
   btnMinus.disabled = true;
   btnCart.disabled = true;
 
@@ -103,3 +104,5 @@ updateDisplay();
     quantity.textContent = curr;
     checkButtonState();
   }
+
+
