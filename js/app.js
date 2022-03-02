@@ -3,9 +3,10 @@ const cappuccinoPage = document.querySelector('.cappuccino-page')
 const overlay = document.querySelector('.order-settings');
 const btnMenu = document.querySelectorAll('.menu-button');
 const btnPlus = document.querySelectorAll('.count .increase');
+const btnCart = document.querySelector('.cart button');
 const btnMinus = document.querySelectorAll('.count .decrease');
-const o = document.querySelector('.processing');
-  const pt = document.querySelector('.add');
+const form = document.querySelector('.counter');
+
 
 
 const wot = document.querySelector('.without-tax span');
@@ -13,10 +14,37 @@ const t = document.querySelector('.tax span');
 const twt = document.querySelector('.total-with-tax span');
 
 
+if (document.querySelector('.processing')) {
+  
+  const o = document.querySelector('.processing');
+  const l = document.querySelector('i');
+
+  l.addEventListener('click',function(e){
+    // do not link to page right away
+    e.preventDefault();
+    // get the URL from the link
+    const url = './checked-out.html';
+    // remove hide class from overlay to show it
+    o.classList.remove('hide');
+    // redirect to the url on the link after a set amount of time
+    // (here, 3 seconds)
+    setTimeout(function(){
+      location.href = url;
+    },3000);
+  })
+
+}
 
 
 
 
+  btnCart.addEventListener('click',function(e){
+    wot.textContent = "$2.99";
+    t.textContent = "$0.19";
+    twt.textContent = "$3.18";
+    e.preventDefault();
+    overlay.classList.add('hide');
+  })
   
   
 
@@ -47,6 +75,7 @@ window.addEventListener('keydown',function(e){
   }
 })
 
+  form.reset();
   btnMinus.disabled = true;
   btnCart.disabled = true;
 
