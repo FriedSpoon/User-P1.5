@@ -1,0 +1,34 @@
+index (starting page) -
+(1 row 1 column)
+
+login-choice Page -
+(1 row 1 column)
+(2 div)
+div 1 -align right
+div 2 - row 1fr 1fr colum 1fr 1fr 1fr
+
+	login steps page -
+	(1 row 1 column)
+	(3 row 3 column)
+
+
+	new user steps page - 
+	(1 row 1 column)
+	(3 row 3 column)
+
+main-menu-order page -
+(1 row 1 column)
+(1 row 1 column)
+
+
+latte-page (any menu item) -
+	 latte-specs page -
+
+checkout page - 
+	swipe-card page - 
+	Final Ad page - 
+
+
+
+
+	colors 
